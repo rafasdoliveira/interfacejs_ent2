@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Número Primo</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <h1>O número é primo?</h1>
+    <p>Development by Rafael Silva de Oliveira</p>
+  <form name="primo">
+    <label for="valor">Informe o número para saber se é primo 
+    <input type="text" name="n" value="" data-js="num" placeholder=" Informe o valor" required ></label>
+    <button type="button" value="Check" onclick="p()">Verificar se é primo</button>
+    <div data-js="result"></div>
+    <br></br>
+  </form>
+      <script>
+      // Função para checar número primo
+      function p() {
+            
+          var n, i, flag = true;
+            
+          // Pegando valor do formulário
+          n = document.primo.n.value;
+          n = parseInt(n)
+          for(i = 2; i <= n - 1; i++)
+              if (n % i == 0) {
+                  flag = false;
+                  break;
+              }
+              // Checando e apresentando a mensagem
+          if (flag == true)
+              alert ("O número " + n + " é primo");
+          else
+              alert("O número " + n + " não é primo");
+      }
+  </script>
+
+    <form action="javascript.html">
+      <button type="javascript"><strong>Voltar para a lista</strong></button>
+    </form>
+    
+  </body>

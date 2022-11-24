@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head> 
+    <meta charset="UTF-8">
+    <title>Fibonacci</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Fibonacci</h1>
+    <p>Development by Rafael Silva de Oliveira</p>   
+   <form>
+    <input type text="text" id="valor"/>
+   </form>
+    <br></br>
+    <form>
+    <button type="button" value="Calcular Fibonacci" onclick="fibonacci_series(valor.value)">Calcular Fibonacci</button>
+    <p id="saida"></p>
+  </form>
+
+<script>
+var fibonacci_series = function (n) {
+if (n==1) 
+{
+var loop = [0, 1];
+document.getElementById("saida").innerHTML = loop;
+return loop;
+} 
+else 
+{
+var s = fibonacci_series(n - 1);
+s.push(s[s.length - 1] + s[s.length - 2]);
+document.getElementById("saida").innerHTML =s;
+return s;
+}
+};
+</script>
+<br></br>
+    <form action="javascript.html">
+      <button type="javascript"><strong>Voltar para a lista</strong></button>
+    </form>
+  </body>
+</html>

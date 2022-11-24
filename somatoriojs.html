@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Somatório em JavaScript</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <h1>Somatório em JavaScript</h1>
+    <p>Development by Rafael Silva de Oliveira</p>
+  <form>
+    <label for="valor 1">Informe o primeiro valor para soma: 
+      <input data-js="number1" type="number" placeholder=" Informe o valor 1" required ></label>
+    <label for="valor 2">Informe o segundo valor para soma: 
+      <input data-js="number2" type="number" placeholder=" Informe o valor 2" required ></label>
+      <button type="button">Somar</button>
+      <div data-js="result"></div>
+  </form> 
+    
+  <script>
+    document.querySelector( 'button' )
+      .addEventListener( 'click', handleClick, false );
+    
+    function handleClick() {
+      var number1 = parseFloat(document.querySelector( '[data-js="number1"]').value);
+      var number2 = parseFloat(document.querySelector( '[data-js="number2"]').value);
+      
+      document.querySelector( '[data-js="result"]' ).innerHTML = sum( number1, number2 );
+    }
+    
+    function sum( number1, number2 ) {
+      return number1 + number2;
+    }
+  </script>
+
+    <br></br>
+    <form action="javascript.html">
+      <button type="javascript"><strong>Voltar para a lista</strong></button>
+    </form>
+    
+  </body>
+</html>
